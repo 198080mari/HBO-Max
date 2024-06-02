@@ -1,0 +1,408 @@
+@import url("./global.css");
+@import url('./reset.css');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg-color);
+  position: fixed;
+  width: 100%; 
+  z-index: 1;  
+  height: 50px;
+}
+nav img {
+  max-width: 160px;
+  width: 100%;
+}
+nav a {
+  text-decoration: none;
+  color: var(--btn-link-color);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 24px;
+}
+nav button {
+  padding: 8px 26px;
+  border-radius: 500px;
+  background: var(--tertiary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-right: 48px;
+}
+nav button:hover {
+  background-color: var(--btn-link-color);
+  color: var(--btn-link-color-b);
+  transition: 1s;
+  cursor: pointer;
+}
+header {
+  padding: 100px 0 300px;
+  background: var(--header-bg-color-gradient);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite alternate;
+  position: relative;  /*txt transparente*/
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+header h1  {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+ .header_title { 
+  display: block;  /*quebrou linha como br*/
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.divider {
+  width: 70%;
+  max-width: 700px;
+  height: 5px;
+  background: var(--divider-bg-color);
+  align-self: center;
+}
+.offer {
+  font-size: 1.25rem;
+}
+.offer_price {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.text_small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.header_button {
+  color: var(--btn-link-color);
+  background: var(--btn-bg-color-gradient);
+  text-transform: uppercase;
+  max-width: 243px;
+  max-height: 51px;
+  align-self: center;
+  padding: 16px 40px;
+  border-radius: 500px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  cursor: pointer;
+  animation: wiggle 2.2s linear infinite;
+  background-size: 250%;  /*muda tom degradee*/
+}
+.header_button:hover {
+  border: 2px solid var(--secondary-color);
+  background: transparent;
+  transition: 1s;
+  background-position: 100%;
+  transform: scale(1.05);
+}
+.subscription {
+  background: url('../images/background.png');
+  background-color: var(--primary-color);
+  background-size: cover;
+  padding: 24px;
+  position: relative;
+}
+.subscription h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.83em 384px;
+  max-width: 1152px;
+  position: relative;
+}
+section .plans {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.subscription_card--first, .subscription_card--second {
+  background: var(--card-bg-color);
+  justify-content: space-around;
+  padding: 40px 60px;
+  border-radius: 8px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: transform rotate 1s ease-in-out;
+  perspective: 2000px;
+  perspective-origin: top;
+  max-width: 600px;
+}
+.subscription_content--first {
+  max-width: 416px;
+  max-height: 321px;
+}
+.subscription_content--second {
+  max-width: 416px;
+  max-height: 395px;
+}
+.subscription_plan {
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  display: flex;
+}
+.subscription h3 {
+  margin: 1em 0;
+  font-weight: bold;
+  text-align: center;;
+}
+.subscription_price {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.line {
+  color: var(--secondary-color);
+}
+.subscription_card--first:hover .subscription_card--second {
+    transform: rotateY(-45deg);
+}
+.subscription_card--second:hover .subscription_card--first {
+    transform: rotateY(45deg);
+}
+.subscription li {
+  text-align: left;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  margin-left: 14px;
+  max-width: 416px;
+}
+.subscription li::before {
+ content: "+";
+ font-size: 2rem;
+ margin-right: 8px;
+}
+section button {
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  border: 3px solid transparent;
+  transition: background 1s, border 1s, transform 1s;
+  padding: 16px 40px;
+  border-radius: 500px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  border: none;
+}
+section button .button_first {
+  min-width: 416px;
+  min-height: 48px;
+}
+section button .button_second {
+  max-width: 436px;
+  max-height: 50px;
+}
+section button:hover {
+  background-color: transparent;
+  background-position: 100%;  /*degradee muda aos poucos*/
+  border: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+  transition: 1s;
+}
+  .gallery {
+  background: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  align-self: center;
+  padding-top: 100px;
+  margin: auto;
+}
+.gallery h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.gallery_container {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1152px;
+  max-height: 1194px;
+  padding: 24px 384px;
+  margin-bottom: 100px;
+  justify-content: space-around;
+}
+.gallery_card {
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s;
+  width: 353px;
+  height: 529px;
+}
+.gallery img {
+  width: 100%;  /*muda o tam. para caber na div*/
+  transition: opacity 2s;
+}
+.gallery_card:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--tertiary-color);
+}
+.gallery_card:nth-child(1):hover {
+  background: url('../images/hbo-hover.webp');
+  background-size: cover;
+  position: relative;  /*por baixo outra img preta ou com o degradee da outra img*/
+  overflow: hidden;  /*respeita dimensões elemento*/
+}
+.gallery_card:nth-child(2):hover {
+  background-image: url('../images/max-hover.webp');
+}
+.gallery_card:nth-child(3):hover {
+  background-image: url('../images/dc-hover.webp');
+}
+.gallery_card:nth-child(4):hover {
+  background-image: url('../images/wb-hover.webp');
+}
+.gallery_card:nth-child(5):hover {
+  background-image: url('../images/cn-hover.webp');
+}
+.gallery_card:nth-child(6):hover {
+  background-image: url('../images/uefa-hover.webp');
+}
+footer {
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+.link {
+  transition: color 0.5s;
+  max-width: 1152px;
+  min-height: 19px;
+  padding: 24px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  text-wrap: wrap;
+}
+a:link {
+  text-decoration: none;
+  color: var(--link-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.87rem;
+}
+footer p {
+  font-size: 0.75rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
+  color: var(--link-color);
+  text-align: center;
+  text-wrap: wrap;
+}
+.social {
+  gap: 40px;
+  margin-top: 80px;
+  max-width: 1152px;
+  min-height: 27px;
+  align-self: center;
+}
+.social img {
+  margin-right: 40px;
+}
+
+
+@media screen and (max-width: 8000px) {
+  .subscription {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  } 
+}
+@media screen and (max-width: 1200px) {
+  .subscription__plan {
+    gap: 40px;
+  }
+  .gallery__container {
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .subscription__plan {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscription__card {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .galelry__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .subscription__price {
+    font-size: 1.5rem;
+  }
+
+  .subscription li {
+    font-size: 1rem;
+  }
+
+  .subscription__plan {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .subscription__card {
+    padding: 40px;
+  }
+
+  .gallery__container {
+    grid-template-columns: repeat(6, 100%);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+  }
+}
+
+
+@keyframes gradient {
+   0% {
+    background-position: 0% 50%;
+   }
+   50% {
+    background-position: 100% 50%;
+   }
+   100% {
+    background-position: 0% 50%;
+   }
+}
+@keyframes wiggle {
+  0%,
+  10% {
+   transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30 % {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
+}
+
+

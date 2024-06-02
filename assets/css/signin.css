@@ -1,0 +1,157 @@
+@import url('./global.css');
+@import url('./reset.css');
+
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--primary-color);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    position: fixed;
+    width: 100%; 
+    z-index: 1;  
+    height: 54px;
+  }
+  nav img {
+    max-width: 160px;
+    width: 100%;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--btn-link-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 24px;
+  }
+  nav button {
+    padding: 8px 26px;
+    border-radius: 500px;
+    background: var(--tertiary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-right: 48px;
+  }
+  nav button:hover {
+    background-color: var(--btn-link-color);
+    color: var(--btn-link-color-b);
+    transition: 1s;
+    cursor: pointer;
+  }
+  main {
+    justify-content: center;
+    justify-items: center;
+    padding: 24px;
+  }
+  .container {
+    background: var(--form-bg-color);
+    border-radius: 8px;
+    min-height: 421px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 104px auto;
+    padding-left: 48px;
+  }
+  .container h1 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 0.67em;
+    margin-top: 0.67em;
+  }
+  label {
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  input {
+    background: var(--form-field-bg-colo);
+    border: var(--form-field-border);
+    max-width: 686px;
+    min-height: 19px;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1rem;
+    text-align: left;
+  }
+  input::placeholder {
+    color: var(--form-field-placeholder);
+  }
+  .login {
+    margin-top: 24px;
+    text-align: left;
+  }
+  button {
+    background: var(--btn-bg-color-gradient);
+    border: 3px solid transparent;
+    transition: background 1s, border 1s, transform 1s;
+    background-size: 250%;
+    padding: 16px 40px;
+    border-radius: 500px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    border: transparent;
+  }
+  button:hover {
+    background-color: transparent;
+    background-position: 100%;  /*degradee muda aos poucos*/
+    border: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+  .login a:link {
+    margin-left: 24px;
+    font-weight: bold;
+    text-transform:none ;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+  .link {
+    transition: color 0.5s;
+    max-width: 1152px;
+    min-height: 19px;
+    padding: 24px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    text-wrap: wrap;
+  }
+  a:link {
+    text-decoration: none;
+    color: var(--link-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.87rem;
+  }
+  footer p {
+    font-size: 0.75rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    font-family: "Quicksand", sans-serif;
+    color: var(--link-color);
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .social {
+    gap: 40px;
+    margin-top: 80px;
+    max-width: 1152px;
+    min-height: 27px;
+    align-self: center;
+  }
+  .social img {
+    margin-right: 40px;
+  }
